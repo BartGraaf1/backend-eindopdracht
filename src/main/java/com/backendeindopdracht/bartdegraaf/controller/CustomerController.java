@@ -1,10 +1,11 @@
-package com.novi.easyboat.controllers;
+package com.backendeindopdracht.bartdegraaf.controller;
 
-import com.novi.easyboat.controllers.dto.CustomerDto;
-import com.novi.easyboat.controllers.dto.CustomerInputDto;
-import com.novi.easyboat.model.Customer;
-import com.novi.easyboat.services.CustomerService;
+import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerDto;
+import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerInputDto;
+import com.backendeindopdracht.bartdegraaf.model.Customer;
+import com.backendeindopdracht.bartdegraaf.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -20,16 +21,23 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @GetMapping
-    public List<CustomerDto> getCustomers() {
-        var dtos = new ArrayList<CustomerDto>();
-        var customers = customerService.getCustomers();
+//    @GetMapping
+//    public List<CustomerDto> getCustomers() {
+//        var dtos = new ArrayList<CustomerDto>();
+//        var customers = customerService.getCustomers();
+//
+//        for (Customer customer : customers) {
+//            dtos.add(CustomerDto.fromCustomer(customer));
+//        }
+//
+//        return dtos;
+//    }
 
-        for (Customer customer : customers) {
-            dtos.add(CustomerDto.fromCustomer(customer));
-        }
 
-        return dtos;
+    @GetMapping(value = "")
+    public ResponseEntity<Object> getCustomers() {
+        System.out.println("Je vraagt nu deze");
+        return ResponseEntity.ok().body(customerService.getCustomers());
     }
 
     @GetMapping("/{id}")

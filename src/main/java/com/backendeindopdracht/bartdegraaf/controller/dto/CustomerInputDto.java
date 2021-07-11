@@ -1,6 +1,7 @@
-package com.novi.easyboat.controllers.dto;
+package com.backendeindopdracht.bartdegraaf.controller.dto;
 
-import com.novi.easyboat.model.Customer;
+
+import com.backendeindopdracht.bartdegraaf.model.Customer;
 
 public class CustomerInputDto {
     public String firstname;

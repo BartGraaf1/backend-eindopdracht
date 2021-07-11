@@ -1,7 +1,9 @@
-package com.novi.easyboat.services;
+package com.backendeindopdracht.bartdegraaf.service;
 
-import com.novi.easyboat.model.Customer;
-import com.novi.easyboat.repositories.CustomerRepository;
+import com.backendeindopdracht.bartdegraaf.model.Customer;
+import com.backendeindopdracht.bartdegraaf.exceptions.NotFoundException;
+import com.backendeindopdracht.bartdegraaf.repository.CarRepository;
+import com.backendeindopdracht.bartdegraaf.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +36,15 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void deleteCustomer(Long id) {
         repository.deleteById(id);
+    }
+
+    @Override
+    public List<Customer> getCustomerForCar(Long carId) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> getCarForCustomer(Long customerId) {
+        return null;
     }
 }

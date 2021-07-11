@@ -5,13 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/utils/LicenseCheckerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6/storage_v2/_src_/database/springboot.f24xUQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6/storage_v2/_src_/database/springboot.f24xUQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_with_jwt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/security_with_jwt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarInputDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerInputDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +67,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29655173" />
@@ -59,22 +75,25 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.backendeindopdracht.bartdegraaf.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Git\Java\Backend\backend-eindopdracht\src\main\java\com\backendeindopdracht\bartdegraaf\service" />
+      <recent name="C:\Git\Java\Backend\backend-eindopdracht\src\main\java\com\backendeindopdracht\bartdegraaf\controller\dto" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/model" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_user_table/controller" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="nl.gettoworktogether.security_with_jwt.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.backendeindopdracht.bartdegraaf.utils" />
+      <recent name="com.backendeindopdracht.bartdegraaf.controller.dto" />
+      <recent name="com.backendeindopdracht.bartdegraaf.controller" />
       <recent name="com.backendeindopdracht.bartdegraaf.exceptions" />
       <recent name="com.backendeindopdracht.bartdegraaf.service" />
-      <recent name="com.backendeindopdracht.bartdegraaf.repository" />
-      <recent name="nl.gettoworktogether.security_with_jwt" />
-      <recent name="nl.gettoworktogether.security_with_jwt.utils" />
     </key>
   </component>
   <component name="RunManager" selected="Application.SecurityMain">
@@ -149,6 +168,8 @@
       <workItem from="1625771809881" duration="2345000" />
       <workItem from="1625818048594" duration="1243000" />
       <workItem from="1625850859185" duration="5318000" />
+      <workItem from="1625901583130" duration="12850000" />
+      <workItem from="1625996180154" duration="15401000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1611225328261</created>

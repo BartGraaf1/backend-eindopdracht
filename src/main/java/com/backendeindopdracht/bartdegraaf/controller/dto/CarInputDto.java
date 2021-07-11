@@ -1,15 +1,16 @@
-package com.novi.easyboat.controllers.dto;
+package com.backendeindopdracht.bartdegraaf.controller.dto;
 
-import com.novi.easyboat.model.Boat;
+import com.backendeindopdracht.bartdegraaf.model.Car;
 
-public class BoatInputDto {
-    public String name;
+public class CarInputDto {
+    public String licensePlate;
     public String type;
+    public Long customerId;
 
-    public Boat toBoat() {
-        var boat = new Boat();
-        boat.setName(name);
-        boat.setType(type);
-        return boat;
+    public Car toCar() {
+        var car = new Car();
+        car.setLicensePlate(licensePlate);
+        car.setType(type);
+        return car;
     }
 }

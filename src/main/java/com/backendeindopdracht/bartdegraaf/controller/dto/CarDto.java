@@ -1,19 +1,24 @@
-package com.novi.easyboat.controllers.dto;
+package com.backendeindopdracht.bartdegraaf.controller.dto;
 
-import com.novi.easyboat.model.Boat;
+import com.backendeindopdracht.bartdegraaf.model.Car;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-public class BoatDto {
+public class CarDto {
     public Long id;
-    public String name;
     public String type;
+    public String licensePlate;
 
-    public static BoatDto fromBoat(Boat boat) {
-        if (boat == null) return null;
+    @JsonSerialize
+    CustomerDto customer;
 
-        var dto = new BoatDto();
-        dto.id = boat.getId();
-        dto.name = boat.getName();
-        dto.type = boat.getType();
+    public static CarDto fromCar(Car car) {
+        if (car == null) return null;
+
+        var dto = new CarDto();
+        dto.id = car.getId();
+        dto.type = car.getType();
+        dto.licensePlate = car.getLicensePlate();
+        dto.customer = CustomerDto.fromCustomer(car.getCustomer());
         return dto;
     }
 }

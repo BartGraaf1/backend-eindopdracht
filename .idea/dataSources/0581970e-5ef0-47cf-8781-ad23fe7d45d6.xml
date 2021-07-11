@@ -784,7 +784,7 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <StartupTime>1625771611</StartupTime>
+      <StartupTime>1625992817</StartupTime>
     </root>
     <database id="2" parent="1" name="easyboat">
       <ObjectId>49232</ObjectId>
@@ -798,7 +798,7 @@ false Zulu
     <database id="4" parent="1" name="springboot">
       <ObjectId>65671</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1049</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1590</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="5" parent="1" name="pg_execute_server_program">
@@ -869,7 +869,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1050</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1591</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="19" parent="4" name="plpgsql">
@@ -970,43 +970,48 @@ UC/10
       <Type>index</Type>
     </access-method>
     <sequence id="31" parent="18" name="hibernate_sequence">
-      <ObjectId>65820</ObjectId>
+      <ObjectId>74846</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1034</StateNumber>
+      <StateNumber>1528</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <table id="32" parent="18" name="authorities">
-      <ObjectId>65822</ObjectId>
+      <ObjectId>74814</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1038</StateNumber>
+      <StateNumber>1529</StateNumber>
     </table>
     <table id="33" parent="18" name="car">
-      <ObjectId>65830</ObjectId>
+      <ObjectId>74858</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1039</StateNumber>
+      <StateNumber>1587</StateNumber>
     </table>
-    <table id="34" parent="18" name="users">
-      <ObjectId>65838</ObjectId>
+    <table id="34" parent="18" name="customer">
+      <ObjectId>74830</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1038</StateNumber>
+      <StateNumber>1530</StateNumber>
     </table>
-    <column id="35" parent="32" name="authority">
+    <table id="35" parent="18" name="users">
+      <ObjectId>74838</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1529</StateNumber>
+    </table>
+    <column id="36" parent="32" name="authority">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1035</StateNumber>
+      <StateNumber>1524</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="32" name="username">
+    <column id="37" parent="32" name="username">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1035</StateNumber>
+      <StateNumber>1524</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="37" parent="32" name="authorities_pkey">
-      <ObjectId>65828</ObjectId>
-      <StateNumber>1035</StateNumber>
+    <index id="38" parent="32" name="authorities_pkey">
+      <ObjectId>74820</ObjectId>
+      <StateNumber>1524</StateNumber>
       <ColNames>authority
 username</ColNames>
       <Unique>1</Unique>
@@ -1017,52 +1022,52 @@ username</ColNames>
 default</CollationNames>
       <ClassIds>3126,3126</ClassIds>
     </index>
-    <key id="38" parent="32" name="authorities_pkey">
-      <ObjectId>65829</ObjectId>
-      <StateNumber>1035</StateNumber>
+    <key id="39" parent="32" name="authorities_pkey">
+      <ObjectId>74821</ObjectId>
+      <StateNumber>1524</StateNumber>
       <ColNames>authority
 username</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>authorities_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="39" parent="32" name="fkhjuy9y4fd8v5m3klig05ktofg">
-      <ObjectId>65846</ObjectId>
-      <StateNumber>1038</StateNumber>
+    <foreign-key id="40" parent="32" name="fkhjuy9y4fd8v5m3klig05ktofg">
+      <ObjectId>74848</ObjectId>
+      <StateNumber>1529</StateNumber>
       <ColNames>username</ColNames>
-      <RefTableId>65838</RefTableId>
+      <RefTableId>74838</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>username</RefColNames>
     </foreign-key>
-    <column id="40" parent="33" name="id">
+    <column id="41" parent="33" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1036</StateNumber>
+      <StateNumber>1586</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="41" parent="33" name="name">
+    <column id="42" parent="33" name="license_plate">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1036</StateNumber>
+      <StateNumber>1586</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="33" name="type">
+    <column id="43" parent="33" name="type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1036</StateNumber>
+      <StateNumber>1586</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="33" name="car_id">
+    <column id="44" parent="33" name="customer_id">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>1036</StateNumber>
+      <StateNumber>1586</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="44" parent="33" name="car_pkey">
-      <ObjectId>65836</ObjectId>
-      <StateNumber>1036</StateNumber>
+    <index id="45" parent="33" name="car_pkey">
+      <ObjectId>74864</ObjectId>
+      <StateNumber>1586</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1070,59 +1075,107 @@ username</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="45" parent="33" name="car_pkey">
-      <ObjectId>65837</ObjectId>
-      <StateNumber>1036</StateNumber>
+    <key id="46" parent="33" name="car_pkey">
+      <ObjectId>74865</ObjectId>
+      <StateNumber>1586</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>car_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="46" parent="33" name="fk3vc4ny3mkh1x7ts9dcfhn17io">
-      <ObjectId>65851</ObjectId>
-      <StateNumber>1039</StateNumber>
-      <ColNames>car_id</ColNames>
-      <RefTableId>65830</RefTableId>
+    <foreign-key id="47" parent="33" name="fk8kbvg77sdvbvsgm7p3988o35q">
+      <ObjectId>74866</ObjectId>
+      <StateNumber>1587</StateNumber>
+      <ColNames>customer_id</ColNames>
+      <RefTableId>74830</RefTableId>
       <RefColPositions>1</RefColPositions>
-      <RefTableName>car</RefTableName>
-      <RefKeyName>car_pkey</RefKeyName>
+      <RefTableName>customer</RefTableName>
+      <RefKeyName>customer_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="47" parent="34" name="username">
+    <column id="48" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1526</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="49" parent="34" name="email_address">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1526</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="34" name="firstname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1526</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="34" name="lastname">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1526</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="34" name="phone_number">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1526</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="53" parent="34" name="customer_pkey">
+      <ObjectId>74836</ObjectId>
+      <StateNumber>1526</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="54" parent="34" name="customer_pkey">
+      <ObjectId>74837</ObjectId>
+      <StateNumber>1526</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>customer_pkey</UnderlyingIndexName>
+    </key>
+    <column id="55" parent="35" name="username">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="48" parent="34" name="apikey">
+    <column id="56" parent="35" name="apikey">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="49" parent="34" name="email">
+    <column id="57" parent="35" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="50" parent="34" name="enabled">
+    <column id="58" parent="35" name="enabled">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1527</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="51" parent="34" name="password">
+    <column id="59" parent="35" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1037</StateNumber>
+      <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="52" parent="34" name="users_pkey">
-      <ObjectId>65844</ObjectId>
-      <StateNumber>1037</StateNumber>
+    <index id="60" parent="35" name="users_pkey">
+      <ObjectId>74844</ObjectId>
+      <StateNumber>1527</StateNumber>
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1131,9 +1184,9 @@ username</ColNames>
       <CollationNames>default</CollationNames>
       <ClassIds>3126</ClassIds>
     </index>
-    <key id="53" parent="34" name="users_pkey">
-      <ObjectId>65845</ObjectId>
-      <StateNumber>1037</StateNumber>
+    <key id="61" parent="35" name="users_pkey">
+      <ObjectId>74845</ObjectId>
+      <StateNumber>1527</StateNumber>
       <ColNames>username</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>

@@ -1,58 +1,64 @@
-package com.novi.easyboat.controllers;
+package com.backendeindopdracht.bartdegraaf.controller;
 
-import com.novi.easyboat.controllers.dto.BookingDto;
-import com.novi.easyboat.controllers.dto.BookingInputDto;
-import com.novi.easyboat.exceptions.BadRequestException;
-import com.novi.easyboat.model.Booking;
-import com.novi.easyboat.services.BookingService;
+import com.backendeindopdracht.bartdegraaf.controller.dto.CarDto;
+import com.backendeindopdracht.bartdegraaf.controller.dto.CarInputDto;
+import com.backendeindopdracht.bartdegraaf.exceptions.BadRequestException;
+import com.backendeindopdracht.bartdegraaf.model.Car;
+import com.backendeindopdracht.bartdegraaf.service.CarService;
+import com.backendeindopdracht.bartdegraaf.utils.LicenseCheckerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.regex.Pattern;
 
 @RestController
-@RequestMapping("bookings")
-public class BookingController {
-    private final BookingService bookingService;
+@RequestMapping("cars")
+public class    CarController {
+    private final CarService carService;
 
     @Autowired
-    public BookingController(BookingService bookingService) {
-        this.bookingService = bookingService;
+    public CarController(CarService carService) {
+        this.carService = carService;
     }
 
     @GetMapping
-    public List<BookingDto> getBookings(@RequestParam(value = "boatId", required = false) Long boatId,
-                                        @RequestParam(value = "customerId", required = false) Long customerId,
-                                        @RequestParam(value = "start", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime start,
-                                        @RequestParam(value = "end", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end) {
-        var dtos = new ArrayList<BookingDto>();
+    public List<CarDto> getCars(@RequestParam(value = "query", required = false, defaultValue = "") String query,
+                                @RequestParam(value = "type", required = false) String type) {
+        var dtos = new ArrayList<CarDto>();
 
-        List<Booking> bookings;
-        if (boatId != null && customerId == null && start == null && end == null) {
-            bookings = bookingService.getBookingsForBoat(boatId);
-
-        } else if (customerId != null && boatId == null && start == null && end == null) {
-            bookings = bookingService.getBookingsForCustomer(customerId);
-
-        } else if (start != null && end != null && customerId == null && boatId == null) {
-            bookings = bookingService.getBookingsBetweenDates(start, end);
-
+        List<Car> cars;
+        if (type == null) {
+            cars = carService.findCarsByLicense(query);
         } else {
-            throw new BadRequestException();
+            cars = carService.findCarsByType(type);
         }
 
-        for (Booking booking : bookings) {
-            dtos.add(BookingDto.fromBooking(booking));
+        for (Car car : cars) {
+            dtos.add(CarDto.fromCar(car));
         }
 
         return dtos;
     }
 
     @PostMapping
-    public void saveBooking(@RequestBody BookingInputDto dto) {
-        bookingService.planBooking(dto.boatId, dto.customerId, dto.startTime, dto.endTime);
+    public CarDto saveCar(@RequestBody CarInputDto dto) {
+        dto.licensePlate  = dto.licensePlate.toUpperCase(Locale.ROOT);
+        LicenseCheckerUtil licensePlate = new LicenseCheckerUtil();
+        licensePlate.setLicensePlate(dto.licensePlate);
+
+        if (!licensePlate.isValidLicense()) {
+            throw new BadRequestException();
+        } else {
+            var car = carService.saveCar(dto.toCar(), dto.customerId);
+            return CarDto.fromCar(car);
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteCar(@PathVariable("id") Long id) {
+        carService.deleteCar(id);
     }
 }

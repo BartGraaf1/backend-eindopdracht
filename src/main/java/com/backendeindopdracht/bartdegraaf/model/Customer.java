@@ -1,10 +1,13 @@
 package com.backendeindopdracht.bartdegraaf.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class Customer {
     @Id
     @GeneratedValue
@@ -16,17 +19,17 @@ public class Customer {
 
     String phoneNumber;
 
-    @Lob
-    byte[] license;
+    String emailAddress;
 
-    @OneToMany(mappedBy = "car")
-    List<Car> car;
+    @OneToMany(mappedBy = "customer")
+    @Cascade(CascadeType.ALL)
+    List<Car> cars;
 
+    // Getters
     public Long getId() {
         return id;
     }
 
-    // Getters
     public String getFirstname() {
         return firstname;
     }
@@ -37,6 +40,14 @@ public class Customer {
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public List<Car> getCars() {
+        return cars;
     }
 
     // Setters
@@ -54,5 +65,13 @@ public class Customer {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 }

@@ -1,5 +1,6 @@
 package com.backendeindopdracht.bartdegraaf.model;
 
+import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
@@ -13,9 +14,9 @@ public class Car {
     Long id;
 
     @ManyToOne
-    Car car;
+    Customer customer;
 
-    String name;
+    String licensePlate;
 
     String type;
 
@@ -24,12 +25,8 @@ public class Car {
         return id;
     }
 
-    public Car getCar() {
-        return car;
-    }
-
-    public String getName() {
-        return name;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
     public String getType() {
@@ -41,15 +38,17 @@ public class Car {
         this.id = id;
     }
 
-    public void setBoat(Car car) {
-        this.car = car;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
 
     public void setType(String type) {
         this.type = type;
+    }
+    public Customer getCustomer() {
+        return customer;
+    }
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }
