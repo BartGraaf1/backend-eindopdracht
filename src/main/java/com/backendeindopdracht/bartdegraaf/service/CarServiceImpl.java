@@ -1,5 +1,7 @@
 package com.backendeindopdracht.bartdegraaf.service;
 
+import com.backendeindopdracht.bartdegraaf.exceptions.BadRequestException;
+import com.backendeindopdracht.bartdegraaf.exceptions.DefaultExceptionWithMessage;
 import com.backendeindopdracht.bartdegraaf.model.Car;
 import com.backendeindopdracht.bartdegraaf.repository.CarRepository;
 import com.backendeindopdracht.bartdegraaf.repository.CustomerRepository;
@@ -46,17 +48,19 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Car saveCar(Car toCar, Long customerId) {
-        System.out.println("Customer id: " + customerId);
         var optionalCustomer = customerRepository.findById(customerId);
+        var optionalCar = carRepository.findByLicensePlate(toCar.getLicensePlate());
+
 
         if (optionalCustomer.isEmpty()) {
             throw new NotFoundException();
         }
 
+        if(!optionalCar.isEmpty()){
+            throw new DefaultExceptionWithMessage("License plate is already in use");
+        }
+
         var customer = optionalCustomer.get();
-
-        //TODO: Validate license is empty
-
         var car = new Car();
         car.setCustomer(customer);
         car.setLicensePlate(toCar.getLicensePlate());
