@@ -2,7 +2,6 @@ package com.backendeindopdracht.bartdegraaf.service;
 
 import com.backendeindopdracht.bartdegraaf.model.Car;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public interface CarService {

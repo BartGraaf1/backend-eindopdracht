@@ -2,6 +2,7 @@ package com.backendeindopdracht.bartdegraaf.model;
 
 import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,12 +14,15 @@ public class Car {
     @GeneratedValue
     Long id;
 
-    @ManyToOne
-    Customer customer;
-
     String licensePlate;
 
     String type;
+
+    @ManyToOne
+    Customer customer;
+
+    @OneToMany(mappedBy = "car")
+    List<CarIssue> carIssues;
 
     // Getters
     public Long getId() {
