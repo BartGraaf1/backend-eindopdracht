@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarInputDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/exceptions/RecordNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/exceptions/RecordNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" afterDir="false" />
     </list>

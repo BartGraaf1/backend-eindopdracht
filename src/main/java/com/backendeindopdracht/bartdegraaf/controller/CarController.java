@@ -69,8 +69,16 @@ public class    CarController {
 //    }
 
     @PutMapping("")
-    public ResponseEntity<Object> updateCar(@RequestBody Car car) {
-        carService.updateCar(car);
-        return ResponseEntity.noContent().build();
+    public CarDto updateCar(@RequestBody CarInputDto dto) {
+        dto.licensePlate  = dto.licensePlate.toUpperCase(Locale.ROOT);
+        LicenseCheckerUtil licensePlate = new LicenseCheckerUtil();
+        licensePlate.setLicensePlate(dto.licensePlate);
+
+        if (!licensePlate.isValidLicense()) {
+            throw new BadRequestException();
+        } else {
+            var car = carService.updateCar(dto.toCar(), dto.customerId);
+            return CarDto.fromCar(car);
+        }
     }
 }

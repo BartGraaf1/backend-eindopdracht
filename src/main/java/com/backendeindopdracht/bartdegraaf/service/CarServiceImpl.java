@@ -71,22 +71,30 @@ public class CarServiceImpl implements CarService {
         return carRepository.save(car);
     }
 
-
-//    @Override
-//    public Car updateCar(Car toCar, Long carId) {
-//        Optional<Car> optionalPerson = carRepository.findById(carId);
-//        if(optionalPerson.isPresent()) {
-//            return carRepository.save(toCar);
-//        } else {
-//            throw new RecordNotFoundException("Person does not exist");
-//        }
-//    }
-
+    
     @Override
-    public void updateCar(Car car) {
-        Optional<Car> optionalCar = carRepository.findById(car.getId());
-        if(optionalCar.isPresent()) {
-            carRepository.save(car);
+    public Car updateCar(Car toCar, Long customerId) {
+        var optionalCustomer = customerRepository.findById(customerId);
+        var optionalCar = carRepository.findByLicensePlate(toCar.getLicensePlate());
+
+        if (optionalCustomer.isEmpty()) {
+            throw new NotFoundException();
+        }
+
+        if(!optionalCar.isEmpty()){
+            throw new DefaultExceptionWithMessage("License plate is already in use");
+        }
+
+        var customer = optionalCustomer.get();
+        var car = new Car();
+        car.setId(toCar.getId());
+        car.setCustomer(customer);
+        car.setLicensePlate(toCar.getLicensePlate());
+        car.setType(toCar.getType());
+
+        Optional<Car> optionalCarToUpdate = carRepository.findById(car.getId());
+        if(optionalCarToUpdate.isPresent()) {
+            return carRepository.save(car);
         } else {
             throw new RecordNotFoundException("Person does not exist");
         }
