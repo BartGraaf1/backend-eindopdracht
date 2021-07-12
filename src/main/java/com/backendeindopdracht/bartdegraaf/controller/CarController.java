@@ -7,12 +7,12 @@ import com.backendeindopdracht.bartdegraaf.model.Car;
 import com.backendeindopdracht.bartdegraaf.service.CarService;
 import com.backendeindopdracht.bartdegraaf.utils.LicenseCheckerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.regex.Pattern;
 
 @RestController
 @RequestMapping("cars")
@@ -60,5 +60,17 @@ public class    CarController {
     @DeleteMapping("/{id}")
     public void deleteCar(@PathVariable("id") Long id) {
         carService.deleteCar(id);
+    }
+
+//    @PutMapping("/{id}")
+//    public CarDto updateCar(@PathVariable("id") long id, @RequestBody CarInputDto dto) {
+//        var car = carService.updateCar(dto.toCar(), id);;
+//        return CarDto.fromCar(car);
+//    }
+
+    @PutMapping("")
+    public ResponseEntity<Object> updateCar(@RequestBody Car car) {
+        carService.updateCar(car);
+        return ResponseEntity.noContent().build();
     }
 }

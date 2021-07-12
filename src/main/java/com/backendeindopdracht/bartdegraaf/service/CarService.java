@@ -13,5 +13,8 @@ public interface CarService {
 
     Car saveCar(Car toCar, Long customerId);
 
+    void updateCar(Car car);
+
     void deleteCar(Long id);
+
 }
