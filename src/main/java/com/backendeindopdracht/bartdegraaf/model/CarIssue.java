@@ -18,7 +18,7 @@ public class CarIssue {
         return id;
     }
 
-    public String getIssueDescription(String issueDescription){
+    public String getIssueDescription(){
         return issueDescription;
     }
 
@@ -35,7 +35,7 @@ public class CarIssue {
         return car;
     }
 
-    public void setCustomer(Car car) {
+    public void setCar(Car car) {
         this.car = car;
     }
 }

@@ -71,7 +71,7 @@ public class CarServiceImpl implements CarService {
         return carRepository.save(car);
     }
 
-    
+
     @Override
     public Car updateCar(Car toCar, Long customerId) {
         var optionalCustomer = customerRepository.findById(customerId);

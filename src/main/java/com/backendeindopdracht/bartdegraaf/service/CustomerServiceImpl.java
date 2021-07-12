@@ -1,5 +1,6 @@
 package com.backendeindopdracht.bartdegraaf.service;
 
+import com.backendeindopdracht.bartdegraaf.exceptions.RecordNotFoundException;
 import com.backendeindopdracht.bartdegraaf.model.Customer;
 import com.backendeindopdracht.bartdegraaf.exceptions.NotFoundException;
 import com.backendeindopdracht.bartdegraaf.repository.CarRepository;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -41,6 +43,16 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public List<Customer> getCustomerForCar(Long carId) {
         return null;
+    }
+
+    @Override
+    public Customer updateCustomer(Customer customer) {
+        Optional<Customer> optionalCustomer = repository.findById(customer.getId());
+        if(optionalCustomer.isPresent()) {
+            return repository.save(customer);
+        } else {
+            throw new RecordNotFoundException("Customer does not exist");
+        }
     }
 
     @Override

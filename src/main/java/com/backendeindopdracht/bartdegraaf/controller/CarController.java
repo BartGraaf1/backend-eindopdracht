@@ -7,7 +7,6 @@ import com.backendeindopdracht.bartdegraaf.model.Car;
 import com.backendeindopdracht.bartdegraaf.service.CarService;
 import com.backendeindopdracht.bartdegraaf.utils.LicenseCheckerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -62,11 +61,6 @@ public class    CarController {
         carService.deleteCar(id);
     }
 
-//    @PutMapping("/{id}")
-//    public CarDto updateCar(@PathVariable("id") long id, @RequestBody CarInputDto dto) {
-//        var car = carService.updateCar(dto.toCar(), id);;
-//        return CarDto.fromCar(car);
-//    }
 
     @PutMapping("")
     public CarDto updateCar(@RequestBody CarInputDto dto) {

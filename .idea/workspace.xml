@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarIssueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarIssueDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarIssueInputDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarIssueRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarIssueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarIssueServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarInputDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerInputDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarIssue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29655173" />
@@ -61,8 +70,8 @@
       <recent name="com.backendeindopdracht.bartdegraaf.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Git\Java\Backend\backend-eindopdracht\src\main\java\com\backendeindopdracht\bartdegraaf\service" />
       <recent name="C:\Git\Java\Backend\backend-eindopdracht\src\main\java\com\backendeindopdracht\bartdegraaf\controller\dto" />
+      <recent name="C:\Git\Java\Backend\backend-eindopdracht\src\main\java\com\backendeindopdracht\bartdegraaf\service" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/model" />
       <recent name="$PROJECT_DIR$/src/main/java/nl/gettoworktogether/security_with_jwt/service" />
@@ -71,11 +80,11 @@
       <recent name="nl.gettoworktogether.security_with_jwt.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.backendeindopdracht.bartdegraaf.model" />
-      <recent name="com.backendeindopdracht.bartdegraaf.exceptions" />
-      <recent name="com.backendeindopdracht.bartdegraaf.utils" />
       <recent name="com.backendeindopdracht.bartdegraaf.controller.dto" />
       <recent name="com.backendeindopdracht.bartdegraaf.controller" />
+      <recent name="com.backendeindopdracht.bartdegraaf.repository" />
+      <recent name="com.backendeindopdracht.bartdegraaf.service" />
+      <recent name="com.backendeindopdracht.bartdegraaf.model" />
     </key>
   </component>
   <component name="RunManager" selected="Application.SecurityMain">

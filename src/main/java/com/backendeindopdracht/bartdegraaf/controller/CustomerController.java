@@ -47,6 +47,12 @@ public class CustomerController {
         return CustomerDto.fromCustomer(customer);
     }
 
+    @PutMapping
+    public CustomerDto updateCustomer(@RequestBody CustomerInputDto dto) {
+        var customer = customerService.updateCustomer(dto.toCustomer());
+        return CustomerDto.fromCustomer(customer);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteCustomer(@PathVariable("id") Long id) {
         customerService.deleteCustomer(id);
