@@ -1,23 +1,17 @@
 package com.backendeindopdracht.bartdegraaf.service;
 
-import com.backendeindopdracht.bartdegraaf.model.CarIssue;
+import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
 
 import java.util.List;
 
-public interface CarIssueService {
-    List<CarIssue> getCarIssuesForCustomer(Long customerId);
+public interface RepairEventService {
+    RepairEvent saveRepairEvent(RepairEvent toRepairEvent, Long customerId);
 
-    List<CarIssue> findCarIssuesByLicense(String query);
+    RepairEvent updateRepairEvent(RepairEvent repairEvent, Long customerId);
 
-    List<CarIssue> findCarIssuesByType(String type);
+    void deleteRepairEvent(Long id);
 
-    CarIssue saveCarIssue(CarIssue toCarIssue, Long customerId);
+    List<RepairEvent> getRepairEvents();
 
-    CarIssue updateCarIssue(CarIssue carIssue, Long customerId);
-
-    void deleteCarIssue(Long id);
-
-    List<CarIssue> getCarIssues();
-
-    CarIssue getCarIssue(Long id);
+    RepairEvent getRepairEvent(Long id);
 }

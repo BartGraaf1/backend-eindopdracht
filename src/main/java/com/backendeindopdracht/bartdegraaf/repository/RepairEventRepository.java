@@ -1,8 +1,9 @@
 package com.backendeindopdracht.bartdegraaf.repository;
 
 import com.backendeindopdracht.bartdegraaf.model.CarIssue;
+import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CarIssueRepository extends JpaRepository<CarIssue, Long> {
-    CarIssue getById(Long id);
+public interface RepairEventRepository extends JpaRepository<RepairEvent, Long> {
+    RepairEvent getById(Long id);
 }

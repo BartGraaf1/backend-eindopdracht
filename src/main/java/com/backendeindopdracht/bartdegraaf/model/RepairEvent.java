@@ -1,37 +1,70 @@
 package com.backendeindopdracht.bartdegraaf.model;
 
-import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerDto;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import java.time.LocalDateTime;
 
-import javax.persistence.*;
 @Entity
-public class CarIssue {
+public class RepairEvent {
 
     @Id
     @GeneratedValue
     Long id;
 
-    String issueDescription;
+    String comment;
 
-    @ManyToOne
-    Car car;
+    LocalDateTime dateOfEvent;
 
-    // Getters
-    public Long getId() {
-        return id;
-    }
+    Boolean isRoutineService;
 
-    public String getIssueDescription(){
-        return issueDescription;
-    }
+    Boolean isEventPayed;
 
     // Setters
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setIssueDescription(String issueDescription){
-        this.issueDescription = issueDescription;
+    public String getComment() {
+        return comment;
     }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public LocalDateTime getDateOfEvent() {
+        return dateOfEvent;
+    }
+
+    public void setDateOfEvent(LocalDateTime dateOfEvent) {
+        this.dateOfEvent = dateOfEvent;
+    }
+
+    // Getters
+    public Long getId() {
+        return id;
+    }
+
+    public Boolean getRoutineService() {
+        return isRoutineService;
+    }
+
+    public void setRoutineService(Boolean routineService) {
+        isRoutineService = routineService;
+    }
+
+    public Boolean getIsEventPayed() {
+        return isEventPayed;
+    }
+
+    public void setIsEventPayed(Boolean evenIsPayed) {
+        this.isEventPayed = evenIsPayed;
+    }
+
+    @ManyToOne
+    Car car;
 
     public Car getCar() {
         return car;

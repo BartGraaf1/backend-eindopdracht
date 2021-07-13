@@ -5,6 +5,7 @@ import com.backendeindopdracht.bartdegraaf.model.CarIssue;
 public class CarIssueInputDto {
     public Long id;
     public String issueDescription;
+
     public Long carId;
 
     public CarIssue toCarIssue() {

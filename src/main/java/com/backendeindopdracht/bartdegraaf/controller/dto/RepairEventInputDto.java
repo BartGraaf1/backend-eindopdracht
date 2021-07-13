@@ -1,16 +1,25 @@
 package com.backendeindopdracht.bartdegraaf.controller.dto;
 
-import com.backendeindopdracht.bartdegraaf.model.CarIssue;
+import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
 
-public class CarIssueInputDto {
+import java.time.LocalDateTime;
+
+public class RepairEventInputDto {
     public Long id;
-    public String issueDescription;
+    public String comment;
+    public LocalDateTime dateOfEvent;
+    public Boolean isRoutineService;
+    public Boolean isEventPayed;
+
     public Long carId;
 
-    public CarIssue toCarIssue() {
-        var carIssue = new CarIssue();
-        carIssue.setId(id);
-        carIssue.setIssueDescription(issueDescription);
-        return carIssue;
+    public RepairEvent toRepairEvent() {
+        var repairEvent = new RepairEvent();
+        repairEvent.setId(id);
+        repairEvent.setComment(comment);
+        repairEvent.setDateOfEvent(dateOfEvent);
+        repairEvent.setRoutineService(isRoutineService);
+        repairEvent.setIsEventPayed(isEventPayed);
+        return repairEvent;
     }
 }

@@ -1,10 +1,10 @@
 package com.backendeindopdracht.bartdegraaf.service;
 
-import com.backendeindopdracht.bartdegraaf.exceptions.RecordNotFoundException;
-import com.backendeindopdracht.bartdegraaf.model.CarIssue;
-import com.backendeindopdracht.bartdegraaf.repository.CarIssueRepository;
-import com.backendeindopdracht.bartdegraaf.repository.CarRepository;
 import com.backendeindopdracht.bartdegraaf.exceptions.NotFoundException;
+import com.backendeindopdracht.bartdegraaf.exceptions.RecordNotFoundException;
+import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
+import com.backendeindopdracht.bartdegraaf.repository.RepairEventRepository;
+import com.backendeindopdracht.bartdegraaf.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,33 +12,18 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CarIssueServiceImpl implements CarIssueService {
-    private final CarIssueRepository carIssueRepository;
+public class RepairEventServiceImpl implements RepairEventService {
+    private final RepairEventRepository repairEventRepository;
     private final CarRepository carRepository;
 
     @Autowired
-    public CarIssueServiceImpl(CarIssueRepository carIssueRepository, CarRepository carRepository) {
-        this.carIssueRepository = carIssueRepository;
+    public RepairEventServiceImpl(RepairEventRepository repairEventRepository, CarRepository carRepository) {
+        this.repairEventRepository = repairEventRepository;
         this.carRepository = carRepository;
     }
 
     @Override
-    public List<CarIssue> getCarIssuesForCustomer(Long customerId) {
-        return null;
-    }
-
-    @Override
-    public List<CarIssue> findCarIssuesByLicense(String query) {
-        return null;
-    }
-
-    @Override
-    public List<CarIssue> findCarIssuesByType(String type) {
-        return null;
-    }
-
-    @Override
-    public CarIssue saveCarIssue(CarIssue toCarIssue, Long carId) {
+    public RepairEvent saveRepairEvent(RepairEvent toRepairEvent, Long carId) {
         var optionalCar = carRepository.findById(carId);
 
         if (optionalCar.isEmpty()) {
@@ -46,17 +31,20 @@ public class CarIssueServiceImpl implements CarIssueService {
         }
 
         var car = optionalCar.get();
-        var carIssue = new CarIssue();
-        carIssue.setId(toCarIssue.getId());
-        carIssue.setCar(car);
-        carIssue.setIssueDescription(toCarIssue.getIssueDescription());
+        var repairEvent = new RepairEvent();
+        repairEvent.setId(toRepairEvent.getId());
+        repairEvent.setCar(car);
+        repairEvent.setComment(toRepairEvent.getComment());
+        repairEvent.setDateOfEvent(toRepairEvent.getDateOfEvent());
+        repairEvent.setRoutineService(toRepairEvent.getRoutineService());
+        repairEvent.setIsEventPayed(toRepairEvent.getIsEventPayed());
 
-        return carIssueRepository.save(carIssue);
+        return repairEventRepository.save(repairEvent);
     }
 
 
     @Override
-    public CarIssue updateCarIssue(CarIssue toCarIssue, Long carId) {
+    public RepairEvent updateRepairEvent(RepairEvent toRepairEvent, Long carId) {
         var optionalCar = carRepository.findById(carId);
 
         if (optionalCar.isEmpty()) {
@@ -64,34 +52,37 @@ public class CarIssueServiceImpl implements CarIssueService {
         }
 
         var car = optionalCar.get();
-        var carIssue = new CarIssue();
-        carIssue.setId(toCarIssue.getId());
-        carIssue.setCar(car);
-        carIssue.setIssueDescription(toCarIssue.getIssueDescription());
+        var repairEvent = new RepairEvent();
+        repairEvent.setId(toRepairEvent.getId());
+        repairEvent.setCar(car);
+        repairEvent.setComment(toRepairEvent.getComment());
+        repairEvent.setDateOfEvent(toRepairEvent.getDateOfEvent());
+        repairEvent.setRoutineService(toRepairEvent.getRoutineService());
+        repairEvent.setIsEventPayed(toRepairEvent.getIsEventPayed());
 
-        Optional<CarIssue> optionalCarIssueToUpdate = carIssueRepository.findById(carIssue.getId());
-        if(optionalCarIssueToUpdate.isPresent()) {
-            return carIssueRepository.save(carIssue);
+        Optional<RepairEvent> optionalRepairEventToUpdate = repairEventRepository.findById(repairEvent.getId());
+        if(optionalRepairEventToUpdate.isPresent()) {
+            return repairEventRepository.save(repairEvent);
         } else {
-            throw new RecordNotFoundException("Car issue does not exist");
+            throw new RecordNotFoundException("Repair event does not exist");
         }
     }
 
     @Override
-    public void deleteCarIssue(Long id) {
-        carIssueRepository.deleteById(id);
+    public void deleteRepairEvent(Long id) {
+        repairEventRepository.deleteById(id);
     }
 
     @Override
-    public List<CarIssue> getCarIssues() {
-        return carIssueRepository.findAll();
+    public List<RepairEvent> getRepairEvents() {
+        return repairEventRepository.findAll();
     }
 
     @Override
-    public CarIssue getCarIssue(Long id) {
-        Optional<CarIssue> optionalCarIssue = carIssueRepository.findById(id);
-        if(optionalCarIssue.isPresent()) {
-            return carIssueRepository.getById(id);
+    public RepairEvent getRepairEvent(Long id) {
+        Optional<RepairEvent> optionalRepairEvent = repairEventRepository.findById(id);
+        if(optionalRepairEvent.isPresent()) {
+            return repairEventRepository.getById(id);
         }else{
             throw new RecordNotFoundException("Car issue does not exist");
         }

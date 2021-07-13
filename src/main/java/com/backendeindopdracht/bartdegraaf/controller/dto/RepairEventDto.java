@@ -1,22 +1,31 @@
 package com.backendeindopdracht.bartdegraaf.controller.dto;
 
-import com.backendeindopdracht.bartdegraaf.model.CarIssue;
+import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-public class CarIssueDto {
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class RepairEventDto {
     public Long id;
-    public String issueDescription;
+    public String comment;
+    public LocalDateTime dateOfEvent;
+    public Boolean isRoutineService;
+    public Boolean isEventPayed;
 
     @JsonSerialize
     CarDto car;
 
-    public static CarIssueDto fromCarIssue(CarIssue carIssue) {
-        if (carIssue == null) return null;
+    public static RepairEventDto fromRepairEvent(RepairEvent repairEvent) {
+        if (repairEvent == null) return null;
 
-        var dto = new CarIssueDto();
-        dto.id = carIssue.getId();
-        dto.issueDescription = carIssue.getIssueDescription();
-        dto.car = CarDto.fromCar(carIssue.getCar());
+        var dto = new RepairEventDto();
+        dto.id = repairEvent.getId();
+        dto.comment = repairEvent.getComment();
+        dto.dateOfEvent = repairEvent.getDateOfEvent();
+        dto.isRoutineService = repairEvent.getRoutineService();
+        dto.isEventPayed = repairEvent.getIsEventPayed();
+        dto.car = CarDto.fromCar(repairEvent.getCar());
         return dto;
     }
 }

@@ -1,11 +1,9 @@
 package com.backendeindopdracht.bartdegraaf.controller;
 
-import com.backendeindopdracht.bartdegraaf.controller.dto.CarIssueDto;
-import com.backendeindopdracht.bartdegraaf.controller.dto.CarIssueInputDto;
-import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerDto;
-import com.backendeindopdracht.bartdegraaf.model.CarIssue;
-import com.backendeindopdracht.bartdegraaf.model.Customer;
-import com.backendeindopdracht.bartdegraaf.service.CarIssueService;
+import com.backendeindopdracht.bartdegraaf.controller.dto.RepairEventDto;
+import com.backendeindopdracht.bartdegraaf.controller.dto.RepairEventInputDto;
+import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
+import com.backendeindopdracht.bartdegraaf.service.RepairEventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,48 +11,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("carIssues")
-public class CarIssueController {
-    private final CarIssueService carIssueService;
+@RequestMapping("repairEvents")
+public class RepairEventController {
+    private final RepairEventService repairEventService;
 
     @Autowired
-    public CarIssueController(CarIssueService carIssueService) {
-        this.carIssueService = carIssueService;
+    public RepairEventController(RepairEventService repairEventService) {
+        this.repairEventService = repairEventService;
     }
 
     @GetMapping
-    public List<CarIssueDto> getCarissue() {
-        var dtos = new ArrayList<CarIssueDto>();
-        var carIssues = carIssueService.getCarIssues();
+    public List<RepairEventDto> getCarissue() {
+        var dtos = new ArrayList<RepairEventDto>();
+        var repairEvents = repairEventService.getRepairEvents();
 
-        for (CarIssue carIssue : carIssues) {
-            dtos.add(CarIssueDto.fromCarIssue(carIssue));
+        for (RepairEvent repairEvent : repairEvents) {
+            dtos.add(RepairEventDto.fromRepairEvent(repairEvent));
         }
         return dtos;
     }
 
     @GetMapping("/{id}")
-    public CarIssueDto getCustomer(@PathVariable("id") Long id) {
-        var carIssues= carIssueService.getCarIssue(id);
-        return CarIssueDto.fromCarIssue(carIssues);
+    public RepairEventDto getCustomer(@PathVariable("id") Long id) {
+        var repairEvents= repairEventService.getRepairEvent(id);
+        return RepairEventDto.fromRepairEvent(repairEvents);
     }
 
     @PostMapping
-    public CarIssueDto saveCarIssue(@RequestBody CarIssueInputDto dto) {
-        var carIssue = carIssueService.saveCarIssue(dto.toCarIssue(), dto.carId);
-        System.out.println(carIssue.getIssueDescription());
-        return CarIssueDto.fromCarIssue(carIssue);
+    public RepairEventDto saveRepairEvent(@RequestBody RepairEventInputDto dto) {
+        var repairEvent = repairEventService.saveRepairEvent(dto.toRepairEvent(), dto.carId);
+        return RepairEventDto.fromRepairEvent(repairEvent);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCarIssue(@PathVariable("id") Long id) {
-        carIssueService.deleteCarIssue(id);
+    public void deleteRepairEvent(@PathVariable("id") Long id) {
+        repairEventService.deleteRepairEvent(id);
     }
 
 
     @PutMapping("")
-    public CarIssueDto updateCarIssue(@RequestBody CarIssueInputDto dto) {
-        var carIssue = carIssueService.updateCarIssue(dto.toCarIssue(), dto.carId);
-        return CarIssueDto.fromCarIssue(carIssue);
+    public RepairEventDto updateRepairEvent(@RequestBody RepairEventInputDto dto) {
+        var repairEvent = repairEventService.updateRepairEvent(dto.toRepairEvent(), dto.carId);
+        return RepairEventDto.fromRepairEvent(repairEvent);
     }
 }
