@@ -42,7 +42,6 @@ public class CarIssueController {
     @PostMapping
     public CarIssueDto saveCarIssue(@RequestBody CarIssueInputDto dto) {
         var carIssue = carIssueService.saveCarIssue(dto.toCarIssue(), dto.carId);
-        System.out.println(carIssue.getIssueDescription());
         return CarIssueDto.fromCarIssue(carIssue);
     }
 

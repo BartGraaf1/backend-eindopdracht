@@ -798,7 +798,7 @@ false Zulu
     <database id="4" parent="1" name="springboot">
       <ObjectId>65671</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1822</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1832</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="5" parent="1" name="pg_execute_server_program">
@@ -869,7 +869,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1823</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1833</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="19" parent="4" name="plpgsql">
@@ -995,31 +995,37 @@ UC/10
       <Owner>postgres</Owner>
       <StateNumber>1530</StateNumber>
     </table>
-    <table id="36" parent="18" name="repair_event">
+    <table id="36" parent="18" name="repair_action">
+      <ObjectId>75000</ObjectId>
+      <Outdated>1</Outdated>
+      <Owner>postgres</Owner>
+      <StateNumber>1831</StateNumber>
+    </table>
+    <table id="37" parent="18" name="repair_event">
       <ObjectId>74990</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1816</StateNumber>
     </table>
-    <table id="37" parent="18" name="users">
+    <table id="38" parent="18" name="users">
       <ObjectId>74838</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1529</StateNumber>
     </table>
-    <column id="38" parent="32" name="authority">
+    <column id="39" parent="32" name="authority">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1524</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="39" parent="32" name="username">
+    <column id="40" parent="32" name="username">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1524</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="40" parent="32" name="authorities_pkey">
+    <index id="41" parent="32" name="authorities_pkey">
       <ObjectId>74820</ObjectId>
       <StateNumber>1524</StateNumber>
       <ColNames>authority
@@ -1032,7 +1038,7 @@ username</ColNames>
 default</CollationNames>
       <ClassIds>3126,3126</ClassIds>
     </index>
-    <key id="41" parent="32" name="authorities_pkey">
+    <key id="42" parent="32" name="authorities_pkey">
       <ObjectId>74821</ObjectId>
       <StateNumber>1524</StateNumber>
       <ColNames>authority
@@ -1040,7 +1046,7 @@ username</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>authorities_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="42" parent="32" name="fkhjuy9y4fd8v5m3klig05ktofg">
+    <foreign-key id="43" parent="32" name="fkhjuy9y4fd8v5m3klig05ktofg">
       <ObjectId>74848</ObjectId>
       <StateNumber>1529</StateNumber>
       <ColNames>username</ColNames>
@@ -1050,32 +1056,32 @@ username</ColNames>
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>username</RefColNames>
     </foreign-key>
-    <column id="43" parent="33" name="id">
+    <column id="44" parent="33" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1586</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="44" parent="33" name="license_plate">
+    <column id="45" parent="33" name="license_plate">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1586</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="45" parent="33" name="type">
+    <column id="46" parent="33" name="type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1586</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="46" parent="33" name="customer_id">
+    <column id="47" parent="33" name="customer_id">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>1586</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="47" parent="33" name="car_pkey">
+    <index id="48" parent="33" name="car_pkey">
       <ObjectId>74864</ObjectId>
       <StateNumber>1586</StateNumber>
       <ColNames>id</ColNames>
@@ -1085,14 +1091,14 @@ username</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="48" parent="33" name="car_pkey">
+    <key id="49" parent="33" name="car_pkey">
       <ObjectId>74865</ObjectId>
       <StateNumber>1586</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>car_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="49" parent="33" name="fk8kbvg77sdvbvsgm7p3988o35q">
+    <foreign-key id="50" parent="33" name="fk8kbvg77sdvbvsgm7p3988o35q">
       <ObjectId>74866</ObjectId>
       <StateNumber>1587</StateNumber>
       <ColNames>customer_id</ColNames>
@@ -1102,26 +1108,26 @@ username</ColNames>
       <RefKeyName>customer_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="50" parent="34" name="id">
+    <column id="51" parent="34" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1690</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="51" parent="34" name="issue_description">
+    <column id="52" parent="34" name="issue_description">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1690</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="34" name="car_id">
+    <column id="53" parent="34" name="car_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>1690</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="53" parent="34" name="car_issue_pkey">
+    <index id="54" parent="34" name="car_issue_pkey">
       <ObjectId>74874</ObjectId>
       <StateNumber>1690</StateNumber>
       <ColNames>id</ColNames>
@@ -1131,14 +1137,14 @@ username</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="54" parent="34" name="car_issue_pkey">
+    <key id="55" parent="34" name="car_issue_pkey">
       <ObjectId>74875</ObjectId>
       <StateNumber>1690</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>car_issue_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="55" parent="34" name="fkboe7gugp9jp5ud9ogpongwscs">
+    <foreign-key id="56" parent="34" name="fkboe7gugp9jp5ud9ogpongwscs">
       <ObjectId>74876</ObjectId>
       <StateNumber>1691</StateNumber>
       <ColNames>car_id</ColNames>
@@ -1148,38 +1154,38 @@ username</ColNames>
       <RefKeyName>car_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="56" parent="35" name="id">
+    <column id="57" parent="35" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1526</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="57" parent="35" name="email_address">
+    <column id="58" parent="35" name="email_address">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1526</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="35" name="firstname">
+    <column id="59" parent="35" name="firstname">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1526</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="35" name="lastname">
+    <column id="60" parent="35" name="lastname">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1526</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="60" parent="35" name="phone_number">
+    <column id="61" parent="35" name="phone_number">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1526</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="61" parent="35" name="customer_pkey">
+    <index id="62" parent="35" name="customer_pkey">
       <ObjectId>74836</ObjectId>
       <StateNumber>1526</StateNumber>
       <ColNames>id</ColNames>
@@ -1189,51 +1195,93 @@ username</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="62" parent="35" name="customer_pkey">
+    <key id="63" parent="35" name="customer_pkey">
       <ObjectId>74837</ObjectId>
       <StateNumber>1526</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>customer_pkey</UnderlyingIndexName>
     </key>
-    <column id="63" parent="36" name="id">
+    <column id="64" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1831</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="65" parent="36" name="cost">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>1831</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="66" parent="36" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1831</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="67" parent="36" name="repair_event_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1831</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="68" parent="36" name="repair_action_pkey">
+      <ObjectId>75003</ObjectId>
+      <StateNumber>1831</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="69" parent="36" name="repair_action_pkey">
+      <ObjectId>75004</ObjectId>
+      <StateNumber>1831</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>repair_action_pkey</UnderlyingIndexName>
+    </key>
+    <column id="70" parent="37" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1815</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="64" parent="36" name="comment">
+    <column id="71" parent="37" name="comment">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1815</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="65" parent="36" name="date_of_event">
+    <column id="72" parent="37" name="date_of_event">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1815</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="66" parent="36" name="is_event_payed">
+    <column id="73" parent="37" name="is_event_payed">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>1815</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="67" parent="36" name="is_routine_service">
+    <column id="74" parent="37" name="is_routine_service">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>1815</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="68" parent="36" name="car_id">
+    <column id="75" parent="37" name="car_id">
       <Position>6</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>1815</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="69" parent="36" name="repair_event_pkey">
+    <index id="76" parent="37" name="repair_event_pkey">
       <ObjectId>74993</ObjectId>
       <StateNumber>1815</StateNumber>
       <ColNames>id</ColNames>
@@ -1243,14 +1291,14 @@ username</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="70" parent="36" name="repair_event_pkey">
+    <key id="77" parent="37" name="repair_event_pkey">
       <ObjectId>74994</ObjectId>
       <StateNumber>1815</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>repair_event_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="71" parent="36" name="fkp71hc40yac66jwgjb6ujm3938">
+    <foreign-key id="78" parent="37" name="fkp71hc40yac66jwgjb6ujm3938">
       <ObjectId>74995</ObjectId>
       <StateNumber>1816</StateNumber>
       <ColNames>car_id</ColNames>
@@ -1260,40 +1308,40 @@ username</ColNames>
       <RefKeyName>car_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="72" parent="37" name="username">
+    <column id="79" parent="38" name="username">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="73" parent="37" name="apikey">
+    <column id="80" parent="38" name="apikey">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="74" parent="37" name="email">
+    <column id="81" parent="38" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="37" name="enabled">
+    <column id="82" parent="38" name="enabled">
       <Position>4</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1527</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="76" parent="37" name="password">
+    <column id="83" parent="38" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="77" parent="37" name="users_pkey">
+    <index id="84" parent="38" name="users_pkey">
       <ObjectId>74844</ObjectId>
       <StateNumber>1527</StateNumber>
       <ColNames>username</ColNames>
@@ -1304,7 +1352,7 @@ username</ColNames>
       <CollationNames>default</CollationNames>
       <ClassIds>3126</ClassIds>
     </index>
-    <key id="78" parent="37" name="users_pkey">
+    <key id="85" parent="38" name="users_pkey">
       <ObjectId>74845</ObjectId>
       <StateNumber>1527</StateNumber>
       <ColNames>username</ColNames>
