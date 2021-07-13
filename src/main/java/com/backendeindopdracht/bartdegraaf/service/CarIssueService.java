@@ -17,4 +17,7 @@ public interface CarIssueService {
 
     void deleteCarIssue(Long id);
 
+    List<CarIssue> getCarIssues();
+
+    CarIssue getCarIssue(Long id);
 }
