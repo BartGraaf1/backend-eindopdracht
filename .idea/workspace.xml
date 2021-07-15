@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/RepairActionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/RepairActionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/RepairActionInputDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/RepairAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/RepairActionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairActionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairActionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarPartStockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarPartStockDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarPartStockInputDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarPartStock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarPartUsed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarPartStockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartStockService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartStockServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6/storage_v2/_src_/database/springboot.f24xUQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6/storage_v2/_src_/database/springboot.f24xUQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarIssueController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +103,17 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="adopt-openjdk-14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
