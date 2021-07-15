@@ -12,6 +12,7 @@ public class RepairEventDto {
     public LocalDateTime dateOfEvent;
     public Boolean isRoutineService;
     public Boolean isEventPayed;
+    public Boolean isEventApproved;
 
     @JsonSerialize
     CarDto car;
@@ -25,6 +26,7 @@ public class RepairEventDto {
         dto.dateOfEvent = repairEvent.getDateOfEvent();
         dto.isRoutineService = repairEvent.getRoutineService();
         dto.isEventPayed = repairEvent.getIsEventPayed();
+        dto.isEventApproved = repairEvent.getIsEventApproved();
         dto.car = CarDto.fromCar(repairEvent.getCar());
         return dto;
     }

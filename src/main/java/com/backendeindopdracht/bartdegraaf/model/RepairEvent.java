@@ -21,47 +21,55 @@ public class RepairEvent {
 
     Boolean isEventPayed;
 
+    Boolean isEventApproved;
+
+
     // Setters
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getComment() {
-        return comment;
     }
 
     public void setComment(String comment) {
         this.comment = comment;
     }
 
-    public LocalDateTime getDateOfEvent() {
-        return dateOfEvent;
+    public void setRoutineService(Boolean routineService) {
+        isRoutineService = routineService;
     }
 
     public void setDateOfEvent(LocalDateTime dateOfEvent) {
         this.dateOfEvent = dateOfEvent;
     }
 
+    public void setIsEventPayed(Boolean evenIsPayed) {
+        this.isEventPayed = evenIsPayed;
+    }
+
+    public void setIsEventApproved(Boolean isEventApproved) { this.isEventApproved = isEventApproved;  }
+
     // Getters
     public Long getId() {
         return id;
+    }
+
+    public String getComment() {
+        return comment;
     }
 
     public Boolean getRoutineService() {
         return isRoutineService;
     }
 
-    public void setRoutineService(Boolean routineService) {
-        isRoutineService = routineService;
+    public LocalDateTime getDateOfEvent() {
+        return dateOfEvent;
     }
 
     public Boolean getIsEventPayed() {
         return isEventPayed;
     }
 
-    public void setIsEventPayed(Boolean evenIsPayed) {
-        this.isEventPayed = evenIsPayed;
-    }
+    public Boolean getIsEventApproved() { return isEventApproved; }
+
 
     @ManyToOne
     Car car;

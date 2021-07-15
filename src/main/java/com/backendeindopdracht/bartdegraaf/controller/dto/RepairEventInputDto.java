@@ -10,6 +10,7 @@ public class RepairEventInputDto {
     public LocalDateTime dateOfEvent;
     public Boolean isRoutineService;
     public Boolean isEventPayed;
+    public Boolean isEventApproved;
 
     public Long carId;
 
@@ -20,6 +21,7 @@ public class RepairEventInputDto {
         repairEvent.setDateOfEvent(dateOfEvent);
         repairEvent.setRoutineService(isRoutineService);
         repairEvent.setIsEventPayed(isEventPayed);
+        repairEvent.setIsEventApproved(isEventApproved);
         return repairEvent;
     }
 }

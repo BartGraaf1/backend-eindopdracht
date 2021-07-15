@@ -38,6 +38,7 @@ public class RepairEventServiceImpl implements RepairEventService {
         repairEvent.setDateOfEvent(toRepairEvent.getDateOfEvent());
         repairEvent.setRoutineService(toRepairEvent.getRoutineService());
         repairEvent.setIsEventPayed(toRepairEvent.getIsEventPayed());
+        repairEvent.setIsEventApproved(toRepairEvent.getIsEventApproved());
 
         return repairEventRepository.save(repairEvent);
     }
@@ -59,6 +60,7 @@ public class RepairEventServiceImpl implements RepairEventService {
         repairEvent.setDateOfEvent(toRepairEvent.getDateOfEvent());
         repairEvent.setRoutineService(toRepairEvent.getRoutineService());
         repairEvent.setIsEventPayed(toRepairEvent.getIsEventPayed());
+        repairEvent.setIsEventApproved(toRepairEvent.getIsEventApproved());
 
         Optional<RepairEvent> optionalRepairEventToUpdate = repairEventRepository.findById(repairEvent.getId());
         if(optionalRepairEventToUpdate.isPresent()) {

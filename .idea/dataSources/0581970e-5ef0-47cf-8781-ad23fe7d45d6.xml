@@ -1012,6 +1012,7 @@ UC/10
     </table>
     <table id="39" parent="18" name="repair_event">
       <ObjectId>74990</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1816</StateNumber>
     </table>
