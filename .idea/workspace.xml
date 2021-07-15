@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarPartStockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarPartStockDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarPartStockInputDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarPartStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarPartUsed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarPartStockRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartStockService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartStockServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6/storage_v2/_src_/database/springboot.f24xUQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6/storage_v2/_src_/database/springboot.f24xUQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarPartUsedController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarPartUsedDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CarPartUsedInputDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarPartUsedRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartUsedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartUsedServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarPartUsed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarPartUsed.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +74,8 @@
       <recent name="nl.gettoworktogether.security_with_jwt.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.backendeindopdracht.bartdegraaf.controller.dto" />
       <recent name="com.backendeindopdracht.bartdegraaf.controller" />
+      <recent name="com.backendeindopdracht.bartdegraaf.controller.dto" />
       <recent name="com.backendeindopdracht.bartdegraaf.service" />
       <recent name="com.backendeindopdracht.bartdegraaf.repository" />
       <recent name="com.backendeindopdracht.bartdegraaf.model" />

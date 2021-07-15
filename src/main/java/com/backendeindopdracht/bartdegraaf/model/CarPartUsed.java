@@ -38,7 +38,7 @@ public class CarPartUsed {
         return repairAction;
     }
 
-    public void setRepairEvent(RepairAction repairAction) {
+    public void setRepairAction(RepairAction repairAction) {
         this.repairAction = repairAction;
     }
 
@@ -49,7 +49,7 @@ public class CarPartUsed {
         return carPartStock;
     }
 
-    public void setPartUsed(CarPartStock carPartStock) {
+    public void setCarPartStock(CarPartStock carPartStock) {
         this.carPartStock = carPartStock;
     }
 }
