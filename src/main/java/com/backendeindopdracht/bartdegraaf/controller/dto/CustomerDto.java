@@ -1,6 +1,8 @@
 package com.backendeindopdracht.bartdegraaf.controller.dto;
 
+import com.backendeindopdracht.bartdegraaf.model.Car;
 import com.backendeindopdracht.bartdegraaf.model.Customer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class CustomerDto {
     public Long id;

@@ -34,6 +34,17 @@ public class CustomerController {
         return dtos;
     }
 
+//    @GetMapping
+//    public List<CustomerDto> getCustomersWithCars() {
+//        var dtos = new ArrayList<CustomerDto>();
+//        var customers = customerService.getCustomers();
+//
+//        for (Customer customer : customers) {
+//            dtos.add(CustomerDto.fromCustomer(customer));
+//        }
+//        return dtos;
+//    }
+
 
     @GetMapping("/{id}")
     public CustomerDto getCustomer(@PathVariable("id") Long id) {

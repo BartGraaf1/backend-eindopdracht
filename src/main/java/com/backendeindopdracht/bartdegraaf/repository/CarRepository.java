@@ -1,6 +1,7 @@
 package com.backendeindopdracht.bartdegraaf.repository;
 
 import com.backendeindopdracht.bartdegraaf.model.Car;
+import com.backendeindopdracht.bartdegraaf.model.CarPartUsed;
 import com.backendeindopdracht.bartdegraaf.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -11,4 +12,6 @@ public interface CarRepository extends JpaRepository<Car, Long> {
     List<Car> findByCustomer(Customer customer);
 
     List<Car> findByLicensePlate(String licensePlate);
+
+    Car getById(Long id);
 }
