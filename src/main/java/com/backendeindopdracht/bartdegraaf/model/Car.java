@@ -18,6 +18,9 @@ public class Car {
 
     String type;
 
+    @Lob
+    byte[] papers;
+
     @ManyToOne
     Customer customer;
 
@@ -36,6 +39,8 @@ public class Car {
     public String getType() {
         return type;
     }
+
+    public byte[] getPapers() {return papers;}
 
     // Setters
     public void setId(Long id) {
@@ -56,5 +61,9 @@ public class Car {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public void setPapers(byte[] papers) {
+        this.papers = papers;
     }
 }

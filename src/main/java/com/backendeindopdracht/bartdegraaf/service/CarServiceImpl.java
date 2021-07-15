@@ -9,7 +9,9 @@ import com.backendeindopdracht.bartdegraaf.repository.CustomerRepository;
 import com.backendeindopdracht.bartdegraaf.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -46,7 +48,6 @@ public class CarServiceImpl implements CarService {
     public List<Car> findCarsByType(String type) {
         return null;
     }
-
 
     @Override
     public Car saveCar(Car toCar, Long customerId) {
@@ -100,9 +101,41 @@ public class CarServiceImpl implements CarService {
         }
     }
 
+    @Override
+    public Car getCar(Long id) {
+        return carRepository.getById(id);
+    }
+
 
     @Override
     public void deleteCar(Long id) {
         carRepository.deleteById(id);
+    }
+
+    @Override
+    public void uploadPapers(Long id, MultipartFile file) throws IOException {
+        var optionalCar = carRepository.findById(id);
+        if (optionalCar.isPresent()) {
+            var car = optionalCar.get();
+            car.setPapers(file.getBytes());
+            carRepository.save(car);
+        } else {
+            throw new NotFoundException();
+        }
+    }
+
+    @Override
+    public byte[] getPapers(Long id) {
+        var optionalCar = carRepository.findById(id);
+        if (optionalCar.isPresent()) {
+            return optionalCar.get().getPapers();
+        } else {
+            throw new NotFoundException();
+        }
+    }
+
+    @Override
+    public List<Car> getCars() {
+        return carRepository.findAll();
     }
 }

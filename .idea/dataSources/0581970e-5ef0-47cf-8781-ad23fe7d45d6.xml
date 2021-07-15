@@ -982,6 +982,7 @@ UC/10
     </table>
     <table id="33" parent="18" name="car">
       <ObjectId>74858</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1587</StateNumber>
     </table>
