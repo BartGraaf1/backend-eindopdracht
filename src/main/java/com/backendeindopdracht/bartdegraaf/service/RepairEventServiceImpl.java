@@ -2,12 +2,22 @@ package com.backendeindopdracht.bartdegraaf.service;
 
 import com.backendeindopdracht.bartdegraaf.exceptions.NotFoundException;
 import com.backendeindopdracht.bartdegraaf.exceptions.RecordNotFoundException;
+import com.backendeindopdracht.bartdegraaf.model.CarPartUsed;
+import com.backendeindopdracht.bartdegraaf.model.RepairAction;
 import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
+import com.backendeindopdracht.bartdegraaf.repository.CarPartUsedRepository;
+import com.backendeindopdracht.bartdegraaf.repository.RepairActionRepository;
 import com.backendeindopdracht.bartdegraaf.repository.RepairEventRepository;
 import com.backendeindopdracht.bartdegraaf.repository.CarRepository;
+import com.lowagie.text.*;
+import com.lowagie.text.Font;
+import com.lowagie.text.pdf.PdfWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.awt.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,11 +25,15 @@ import java.util.Optional;
 public class RepairEventServiceImpl implements RepairEventService {
     private final RepairEventRepository repairEventRepository;
     private final CarRepository carRepository;
+    private final RepairActionRepository repairActionRepository;
+    private final CarPartUsedRepository carPartUsedRepository;
 
     @Autowired
-    public RepairEventServiceImpl(RepairEventRepository repairEventRepository, CarRepository carRepository) {
+    public RepairEventServiceImpl(RepairEventRepository repairEventRepository, CarRepository carRepository, RepairActionRepository repairActionRepository, CarPartUsedRepository carPartUsedRepository) {
         this.repairEventRepository = repairEventRepository;
         this.carRepository = carRepository;
+        this.repairActionRepository = repairActionRepository;
+        this.carPartUsedRepository = carPartUsedRepository;
     }
 
     @Override
@@ -87,6 +101,81 @@ public class RepairEventServiceImpl implements RepairEventService {
             return repairEventRepository.getById(id);
         }else{
             throw new RecordNotFoundException("Car issue does not exist");
+        }
+    }
+
+    @Override
+    public String getRepairEventInvoice(Long id) throws FileNotFoundException {
+
+        var totalPrice = 0.00;
+        Optional<RepairEvent> optionalRepairEvent = repairEventRepository.findById(id);
+        if(optionalRepairEvent.isPresent()) {
+            var event = repairEventRepository.getById(id);
+            var car = event.getCar();
+            var customer = car.getCustomer();
+
+            Document document = new Document();
+            String filePath = "files/invoice" + id + ".pdf";
+            PdfWriter.getInstance(document, new FileOutputStream(filePath));
+
+            document.open();
+            Font fontHeader = FontFactory.getFont(FontFactory.COURIER, 16, Font.BOLD, Color.BLACK);
+            Font fontRegular = FontFactory.getFont(FontFactory.COURIER, 12, Color.BLACK);
+            Font fontRegularBold = FontFactory.getFont(FontFactory.COURIER, 12, Font.BOLD, Color.BLACK);
+            Chunk chunk = new Chunk("Invoice for: " + car.getLicensePlate(), fontHeader);
+            chunk.setUnderline(0.1f, -2f);
+            document.add(chunk);
+            document.add(new Paragraph("\n"));
+
+            Paragraph paragraph = new Paragraph("Customer: " + customer.getFirstname() + customer.getLastname(), fontRegular);
+            document.add(paragraph);
+            paragraph = new Paragraph("Email: " + customer.getEmailAddress(), fontRegular);
+            document.add(paragraph);
+            paragraph = new Paragraph("Phone number: " + customer.getPhoneNumber(), fontRegular);
+            document.add(paragraph);
+            document.add(new Paragraph("\n"));
+
+            if(event.getRoutineService()){
+                totalPrice += 40.0;
+                document.add(new Paragraph("Cost for routine service: 40,0", fontRegular));
+                document.add(new Paragraph("\n"));
+            }
+
+            document.add(new Paragraph("Things done to the car: ", fontRegularBold));
+
+
+            List<RepairAction> repairActions = repairActionRepository.getByRepairEventId(id);
+            for (RepairAction repairAction: repairActions) {
+
+                document.add(new Paragraph("\tDescription: " + repairAction.getDescription(), fontRegular));
+                document.add(new Paragraph("\tCost: " + repairAction.getCost(), fontRegular));
+                document.add(new Paragraph("\tParts used: ", fontRegularBold));
+
+                totalPrice += repairAction.getCost();
+
+                List<CarPartUsed> carPartUseds = carPartUsedRepository.getByRepairActionId(repairAction.getId());
+                for (CarPartUsed carPartUsed: carPartUseds) {
+                    var carPartPrice = carPartUsed.getCarPartStock().getPrice();
+                    var carPartAmount = carPartUsed.getAmountUsed();
+                    var carPartDescription = carPartUsed.getCarPartStock().getDescription();
+
+                    document.add(new Paragraph("\t\t\tPart used: " + carPartDescription, fontRegular));
+                    document.add(new Paragraph("\t\t\tPart price: " + carPartPrice, fontRegular));
+                    document.add(new Paragraph("\t\t\tAmount used: " + carPartAmount, fontRegular));
+                    document.add(new Paragraph("\n"));
+
+                    totalPrice += carPartPrice * carPartAmount;
+                }
+            }
+
+            document.add(new Paragraph("\n\n"));
+            document.add(new Paragraph("Total price: " + totalPrice, fontHeader));
+
+            document.close();
+
+            return filePath;
+        }else{
+            throw new RecordNotFoundException("Repair event does not exist");
         }
     }
 }

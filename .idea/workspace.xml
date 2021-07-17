@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0581970e-5ef0-47cf-8781-ad23fe7d45d6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_albfernandez_juniversalchardet_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_librepdf_openpdf_1_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/invoice102.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto/CustomerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_with_jwt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/security_with_jwt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/RepairEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/RepairEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarPartUsedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarPartUsedRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/RepairActionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/RepairActionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairEventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairEventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairEventServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -47,18 +54,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/dto" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/pdfbox-3.0.0-RC1.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29655173" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -75,11 +87,11 @@
       <recent name="nl.gettoworktogether.security_with_jwt.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.backendeindopdracht.bartdegraaf.service" />
+      <recent name="com.backendeindopdracht.bartdegraaf.utils" />
       <recent name="com.backendeindopdracht.bartdegraaf.exceptions" />
       <recent name="com.backendeindopdracht.bartdegraaf.controller" />
       <recent name="com.backendeindopdracht.bartdegraaf.controller.dto" />
-      <recent name="com.backendeindopdracht.bartdegraaf.service" />
-      <recent name="com.backendeindopdracht.bartdegraaf.repository" />
     </key>
   </component>
   <component name="RunManager" selected="Application.SecurityMain">
@@ -105,13 +117,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,6 +172,8 @@
       <workItem from="1625996180154" duration="20428000" />
       <workItem from="1626111993577" duration="4531000" />
       <workItem from="1626194223151" duration="9298000" />
+      <workItem from="1626509934112" duration="12650000" />
+      <workItem from="1626527116705" duration="4208000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1611225328261</created>
@@ -195,6 +211,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
