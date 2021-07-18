@@ -4,18 +4,11 @@ import com.backendeindopdracht.bartdegraaf.controller.dto.RepairEventDto;
 import com.backendeindopdracht.bartdegraaf.controller.dto.RepairEventInputDto;
 import com.backendeindopdracht.bartdegraaf.model.RepairEvent;
 import com.backendeindopdracht.bartdegraaf.service.RepairEventService;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
-import com.lowagie.text.pdf.PdfWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.*;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

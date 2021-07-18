@@ -1,7 +1,5 @@
 package com.backendeindopdracht.bartdegraaf.model;
 
-import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerDto;
-
 import javax.persistence.*;
 @Entity
 public class CarIssue {

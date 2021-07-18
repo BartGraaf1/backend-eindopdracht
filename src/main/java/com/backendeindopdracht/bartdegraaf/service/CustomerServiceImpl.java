@@ -2,8 +2,6 @@ package com.backendeindopdracht.bartdegraaf.service;
 
 import com.backendeindopdracht.bartdegraaf.exceptions.RecordNotFoundException;
 import com.backendeindopdracht.bartdegraaf.model.Customer;
-import com.backendeindopdracht.bartdegraaf.exceptions.NotFoundException;
-import com.backendeindopdracht.bartdegraaf.repository.CarRepository;
 import com.backendeindopdracht.bartdegraaf.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

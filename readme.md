@@ -20,7 +20,7 @@ git clone https://github.com/BartGraaf1/backend-eindopdracht
 ```
 Als dit succesvol is gebeurd staat het project nu op de computer.
 
-## Stap 2 - Open het project
+## Stap 2 - Stel database in
 
 Open PostgreSQL en creeer een database. onthoud deze gegevens aangezien we deze gegevens later nodig hebben.
 

@@ -1,6 +1,5 @@
 package com.backendeindopdracht.bartdegraaf.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 

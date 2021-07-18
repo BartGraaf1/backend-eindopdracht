@@ -1,6 +1,5 @@
 package com.backendeindopdracht.bartdegraaf.service;
 
-import com.backendeindopdracht.bartdegraaf.exceptions.BadRequestException;
 import com.backendeindopdracht.bartdegraaf.exceptions.DefaultExceptionWithMessage;
 import com.backendeindopdracht.bartdegraaf.exceptions.RecordNotFoundException;
 import com.backendeindopdracht.bartdegraaf.model.Car;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 

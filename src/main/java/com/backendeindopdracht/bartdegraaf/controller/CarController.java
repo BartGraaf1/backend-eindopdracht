@@ -2,10 +2,8 @@ package com.backendeindopdracht.bartdegraaf.controller;
 
 import com.backendeindopdracht.bartdegraaf.controller.dto.CarDto;
 import com.backendeindopdracht.bartdegraaf.controller.dto.CarInputDto;
-import com.backendeindopdracht.bartdegraaf.controller.dto.CarPartStockDto;
 import com.backendeindopdracht.bartdegraaf.exceptions.BadRequestException;
 import com.backendeindopdracht.bartdegraaf.model.Car;
-import com.backendeindopdracht.bartdegraaf.model.CarPartStock;
 import com.backendeindopdracht.bartdegraaf.service.CarService;
 import com.backendeindopdracht.bartdegraaf.utils.LicenseCheckerUtil;
 import org.springframework.beans.factory.annotation.Autowired;

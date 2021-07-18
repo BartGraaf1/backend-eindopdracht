@@ -2,9 +2,7 @@ package com.backendeindopdracht.bartdegraaf.controller;
 
 import com.backendeindopdracht.bartdegraaf.controller.dto.CarIssueDto;
 import com.backendeindopdracht.bartdegraaf.controller.dto.CarIssueInputDto;
-import com.backendeindopdracht.bartdegraaf.controller.dto.CustomerDto;
 import com.backendeindopdracht.bartdegraaf.model.CarIssue;
-import com.backendeindopdracht.bartdegraaf.model.Customer;
 import com.backendeindopdracht.bartdegraaf.service.CarIssueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

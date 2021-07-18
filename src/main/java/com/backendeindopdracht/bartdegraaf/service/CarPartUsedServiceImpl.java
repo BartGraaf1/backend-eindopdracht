@@ -2,7 +2,6 @@ package com.backendeindopdracht.bartdegraaf.service;
 
 import com.backendeindopdracht.bartdegraaf.exceptions.NotFoundException;
 import com.backendeindopdracht.bartdegraaf.exceptions.RecordNotFoundException;
-import com.backendeindopdracht.bartdegraaf.model.CarIssue;
 import com.backendeindopdracht.bartdegraaf.model.CarPartUsed;
 import com.backendeindopdracht.bartdegraaf.repository.CarPartStockRepository;
 import com.backendeindopdracht.bartdegraaf.repository.CarPartUsedRepository;
