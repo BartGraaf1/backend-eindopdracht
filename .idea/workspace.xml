@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f30c6-0312-4b99-a7fb-5187c14b423a" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backendeindopdracht/bartdegraaf/services/CarIssueServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backendeindopdracht/bartdegraaf/services/CarPartStockServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backendeindopdracht/bartdegraaf/services/CarPartUsedServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backendeindopdracht/bartdegraaf/services/CustomerServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/backendeindopdracht/bartdegraaf/services/RepairActionServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/BaseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CarIssueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/RepairEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/controller/RepairEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/CarIssue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/RepairAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/model/RepairAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarPartUsedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarPartUsedRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/CarRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/RepairActionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/RepairActionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/RepairEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/repository/RepairEventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartUsedServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarPartUsedServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CarServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/RepairEventService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/backendeindopdracht/bartdegraaf/utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/backendeindopdracht/bartdegraaf/services/RepairEventServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/backendeindopdracht/bartdegraaf/services/RepairEventServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,22 +89,7 @@
       <recent name="com.backendeindopdracht.bartdegraaf.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SecurityMain (1)">
-    <configuration name="SecurityMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="adopt-openjdk-14" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.backendeindopdracht.bartdegraaf.SecurityMain" />
-      <module name="security_with_jwt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.gettoworktogether.security_with_jwt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in security_with_jwt">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="adopt-openjdk-14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -141,7 +108,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in security_with_jwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security_with_jwt" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarIssueServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="security_with_jwt" />
       <extension name="coverage">
         <pattern>
@@ -150,13 +125,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.backendeindopdracht.bartdegraaf.services" />
-      <option name="MAIN_CLASS_NAME" value="com.backendeindopdracht.bartdegraaf.services.CarServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.backendeindopdracht.bartdegraaf.services.CarIssueServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepairEventServiceTest.saveRepairEventTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarPartStockServiceTest.saveCarPartStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="security_with_jwt" />
       <extension name="coverage">
         <pattern>
@@ -165,14 +140,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.backendeindopdracht.bartdegraaf.services" />
-      <option name="MAIN_CLASS_NAME" value="com.backendeindopdracht.bartdegraaf.services.RepairEventServiceTest" />
-      <option name="METHOD_NAME" value="saveRepairEventTest" />
+      <option name="MAIN_CLASS_NAME" value="com.backendeindopdracht.bartdegraaf.services.CarPartStockServiceTest" />
+      <option name="METHOD_NAME" value="saveCarPartStock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.backendeindopdracht.bartdegraaf.services in security_with_jwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarPartUsedServiceTest.saveRepairActionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="security_with_jwt" />
       <extension name="coverage">
         <pattern>
@@ -181,7 +156,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.backendeindopdracht.bartdegraaf.services" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="com.backendeindopdracht.bartdegraaf.services.CarPartUsedServiceTest" />
+      <option name="METHOD_NAME" value="saveRepairActionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepairActionServiceTest.saveRepairActionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security_with_jwt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.backendeindopdracht.bartdegraaf.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.backendeindopdracht.bartdegraaf.services" />
+      <option name="MAIN_CLASS_NAME" value="com.backendeindopdracht.bartdegraaf.services.RepairActionServiceTest" />
+      <option name="METHOD_NAME" value="saveRepairActionTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,19 +194,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SecurityMain" />
       <item itemvalue="Spring Boot.SecurityMain" />
       <item itemvalue="Spring Boot.SecurityMain (1)" />
-      <item itemvalue="JUnit.RepairEventServiceTest.saveRepairEventTest" />
-      <item itemvalue="JUnit.CarServiceTest" />
-      <item itemvalue="JUnit.com.backendeindopdracht.bartdegraaf.services in security_with_jwt" />
+      <item itemvalue="JUnit.CarIssueServiceTest" />
+      <item itemvalue="JUnit.RepairActionServiceTest.saveRepairActionTest" />
+      <item itemvalue="JUnit.CarPartStockServiceTest.saveCarPartStock" />
+      <item itemvalue="JUnit.CarPartUsedServiceTest.saveRepairActionTest" />
+      <item itemvalue="JUnit.All in security_with_jwt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.backendeindopdracht.bartdegraaf.services in security_with_jwt" />
-        <item itemvalue="JUnit.CarServiceTest" />
-        <item itemvalue="JUnit.RepairEventServiceTest.saveRepairEventTest" />
-        <item itemvalue="Application.SecurityMain" />
+        <item itemvalue="JUnit.All in security_with_jwt" />
+        <item itemvalue="JUnit.CarPartUsedServiceTest.saveRepairActionTest" />
+        <item itemvalue="JUnit.CarPartStockServiceTest.saveCarPartStock" />
+        <item itemvalue="JUnit.RepairActionServiceTest.saveRepairActionTest" />
+        <item itemvalue="JUnit.CarIssueServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +231,7 @@
       <workItem from="1626194223151" duration="9298000" />
       <workItem from="1626509934112" duration="12650000" />
       <workItem from="1626527116705" duration="8515000" />
-      <workItem from="1626599681106" duration="24630000" />
+      <workItem from="1626599681106" duration="27837000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1611225328261</created>
