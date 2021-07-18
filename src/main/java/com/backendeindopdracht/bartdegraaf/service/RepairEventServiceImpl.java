@@ -18,6 +18,8 @@ import org.springframework.stereotype.Service;
 import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.List;
 import java.util.Optional;
 
@@ -106,8 +108,8 @@ public class RepairEventServiceImpl implements RepairEventService {
 
     @Override
     public String getRepairEventInvoice(Long id) throws FileNotFoundException {
-
         var totalPrice = 0.00;
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL);
         Optional<RepairEvent> optionalRepairEvent = repairEventRepository.findById(id);
         if(optionalRepairEvent.isPresent()) {
             var event = repairEventRepository.getById(id);
@@ -122,17 +124,13 @@ public class RepairEventServiceImpl implements RepairEventService {
             Font fontHeader = FontFactory.getFont(FontFactory.COURIER, 16, Font.BOLD, Color.BLACK);
             Font fontRegular = FontFactory.getFont(FontFactory.COURIER, 12, Color.BLACK);
             Font fontRegularBold = FontFactory.getFont(FontFactory.COURIER, 12, Font.BOLD, Color.BLACK);
-            Chunk chunk = new Chunk("Invoice for: " + car.getLicensePlate(), fontHeader);
-            chunk.setUnderline(0.1f, -2f);
-            document.add(chunk);
-            document.add(new Paragraph("\n"));
 
-            Paragraph paragraph = new Paragraph("Customer: " + customer.getFirstname() + customer.getLastname(), fontRegular);
-            document.add(paragraph);
-            paragraph = new Paragraph("Email: " + customer.getEmailAddress(), fontRegular);
-            document.add(paragraph);
-            paragraph = new Paragraph("Phone number: " + customer.getPhoneNumber(), fontRegular);
-            document.add(paragraph);
+            document.add(new Chunk("Invoice for: " + car.getLicensePlate(), fontHeader).setUnderline(0.1f, -2f));
+            document.add(new Paragraph("\n"));
+            document.add(new Paragraph("Customer: " + customer.getFirstname() + " " + customer.getLastname(), fontRegular));
+            document.add(new Paragraph("Email: " + customer.getEmailAddress(), fontRegular));
+            document.add(new Paragraph("Phone number: " + customer.getPhoneNumber(), fontRegular));
+            document.add(new Paragraph("Date of service: " + formatter.format(event.getDateOfEvent()), fontRegular));
             document.add(new Paragraph("\n"));
 
             if(event.getRoutineService()){
@@ -140,6 +138,9 @@ public class RepairEventServiceImpl implements RepairEventService {
                 document.add(new Paragraph("Cost for routine service: 40,0", fontRegular));
                 document.add(new Paragraph("\n"));
             }
+
+            document.add(new Paragraph("Service description: " + event.getComment(), fontRegular));
+            document.add(new Paragraph("\n"));
 
             document.add(new Paragraph("Things done to the car: ", fontRegularBold));
 

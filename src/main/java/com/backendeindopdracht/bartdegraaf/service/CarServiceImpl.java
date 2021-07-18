@@ -82,7 +82,7 @@ public class CarServiceImpl implements CarService {
             throw new NotFoundException();
         }
 
-        if(!optionalCar.isEmpty()){
+        if(!optionalCar.isEmpty() && !optionalCar.get(0).getId().equals(toCar.getId())){
             throw new DefaultExceptionWithMessage("License plate is already in use");
         }
 

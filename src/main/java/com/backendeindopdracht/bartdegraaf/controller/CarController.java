@@ -90,8 +90,6 @@ public class CarController {
 
     @PostMapping("/{id}/papers")
     public void uploadPapers(@PathVariable("id") Long id, @RequestParam("file") MultipartFile file) throws IOException {
-        System.out.println("Nu moet he wel het bespand versturen");
-        System.out.println("Car id: " + id);
         if (file.getContentType() == null || !file.getContentType().equals("application/pdf")) {
             throw new BadRequestException();
         }
